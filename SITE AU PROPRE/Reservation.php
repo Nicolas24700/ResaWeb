@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réservation</title>
+    <title>Page de réservation - Golden Resort Hotel</title>
     <link rel="icon" type="image/x-icon" href="Img/logo-golden-resort.webp">
     <link rel="stylesheet" href="styles-general.css">
     <link rel="stylesheet" href="StyleReservation.css">
@@ -23,42 +23,50 @@
           </ul>
         </div>
         <div class="nav-button">
-          <a href="#">Se Connecter</a>
+          <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
+          </div>
         </nav>
-      </div>
+
       <header>
           <div class="content">
               <h1><lang="en">GOLDEN RESORT HOTEL.</lang></h1>
               <p>Réservation</p>
-              <form method="GET" class="SeachBar" action="resultat.php">
-                <input type="text" class="Search" id="Search-inp" placeholder="Rechercher...">
-                <button class="Search-btn"  id="Search-inp-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <form method="GET" class="SeachBar" action="Reservation.php#reser">
+            <label for="Search-inp" class="sr-only">Rechercher :</label>
+                <input type="text" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
+                <button type="submit"class="Search-btn"  id="Search-inp-btn">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span class="sr-only">Lancer la recherche</span>
+                </button>
             </form>
           </div>
+      
       </header>
-    <!-- TEST TRUC TRI TKT -->
     <section id="reser" class="Section-reservation">
     <h2>Reservation</h2>
     <form method="get" action="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php#reser">
-        <p>Trier par : 
-            <button name="tri" value="asc">Prix croissant</button> / 
-            <button name="tri" value="desc">Prix décroissant</button>
+        <p class="filterp">Trier par :
+            <button class="tri" name="tri" value="asc">Prix croissant</button> / 
+            <button class="tri" name="tri" value="desc">Prix décroissant</button>
         </p>
     </form>
     <div class="Chambre-div">
 
     <?php
-    // AFFICHAGE DES CHAMBRES DISPONIBLE , AVEC SYSTEME DE TRI
+    // AFFICHAGE DES CHAMBRES DISPONIBLE , AVEC SYSTEME DE TRI , ET DE RECHERCHE
     require 'bdd.php';
-    $tri = "ASC";
 
-    if (isset($_GET['tri']) && $_GET['tri'] === "desc") {
-        $tri = "DESC";
-    }
-
-    $stmtchambre = $db->query("SELECT * FROM sae_chambres WHERE Disponibilite = 1 GROUP BY Type_Chambres ORDER BY PrixParNuit $tri LIMIT 3");
-    $saechambre = $stmtchambre->fetchAll(PDO::FETCH_ASSOC);
+$query = isset($_GET['query'])? $_GET['query'] : '';
+$tri = "ASC";
+if (isset($_GET['tri']) && $_GET['tri'] === "desc") {
+  $tri = "DESC";
+}
+    $stmtchambre = $db->query("SELECT * FROM sae_chambres WHERE Disponibilite = 1 AND (Type_Chambres LIKE '%{$query}%' OR Description LIKE '%{$query}%') GROUP BY Type_Chambres ORDER BY PrixParNuit {$tri}");
+$saechambre = $stmtchambre->fetchAll(PDO::FETCH_ASSOC);
     
+if (empty($saechambre)) {
+  echo "<p>Aucun résultat trouvé.</p>";
+} else {
     foreach ($saechambre as $Chambre) {
       $type = $Chambre['Type_Chambres'];
       $prix = $Chambre['PrixParNuit'];
@@ -76,10 +84,63 @@
       echo "</div>";
       echo "</div>";
     }
+  }
     ?>
+    
     </div>
 </section>
 
-    <script src="/SITE OFFICIEL/SITE AU PROPRE/Script.js"></script>
+
+<footer>
+        <div class="Titrep">
+            <p><lang="en">THE GOLDEN RESORT</lang></p>
+        </div>
+        <div class="Footer-box">
+            <div class="Footer-border">
+                <p class="Titre"><strong>Bureau des réservations</strong></p>
+                <br>
+                <p><i class="fa-solid fa-location-dot"></i>  Golden Resort Hotel,
+                    Boulevard de la Plage 83990 Saint-Tropez, France</p>
+                <br>
+                <p><i class="fa-solid fa-mobile-screen-button"></i>  01 23 45 67 89</p>
+                <br>
+                <p><i class="fa-regular fa-envelope"></i>  contact@goldenresorthotel.fr</p>
+            </div>
+            <div class="Footer-border">
+                <p class="Titre"><strong>Heures d'ouverture</strong></p>
+                <br>
+                <p>Lundi au Vendredi</p>
+                <p>9h00 - 20h00</p>
+                <br>
+                <p>Samedi</p>
+                <p>9h00 à 22h00</p>
+                <br>
+                <p>Suivez-nous: <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                </p>
+            </div>
+            <div class="Footer-border">
+                <p class="Titre"><strong>Mentions légales</strong></p>
+                <br>
+                <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
+                <br>
+                </p>
+                <p>@2024 tous droit réservé</p>
+            </div>
+        </div>
+        <p class="HDP"> <a href="#"><strong>Haut de page</strong></a></p>
+      </footer>
+    <script>
+      window.addEventListener('scroll', function () {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 0) {
+    navbar.classList.add('navbar-scrolled');
+  } else {
+    navbar.classList.remove('navbar-scrolled');
+  }
+}
+);
+    </script>
 </body>
 </html>

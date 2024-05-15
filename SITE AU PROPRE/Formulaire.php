@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulaire de Réservation</title>
+  <title>Formulaire de réservation - Golden Resort Hotel</title>
   <link rel="stylesheet" href="Formulaire.css" />
   <link rel="icon" type="image/x-icon" href="Img/logo-golden-resort.webp">
 </head>
@@ -23,9 +23,10 @@
       </ul>
     </div>
     <div class="nav-button">
-      <a href="#">Se Connecter</a>
+      <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
+      </div>
   </nav>
-  </div>
+
 
   <div class="FormulaireReservation">
     <div class="formulaire">
@@ -91,41 +92,42 @@
             <p>Vous n'avez sélectionné aucune chambre !</p><br>
           </div>
         </div>
-
-
+        <?php
+            require 'Formulairebdd.php';
+            ?>
       </div>
       <div class="cote-form">
-        <form action="">
+        <form action="/SITE OFFICIEL/SITE AU PROPRE/Formulairebdd.php" method="post">
           <h1>Réserver une chambre</h1>
           <div class="surligneurone"></div>
           <p>* Tous les champs sont obligatoires *</p>
           <div class="form-block">
-            <label for="Prenom">* Prénom :</label>
-            <input type="text" name="Prenom" required id="Prenom" maxlength="15">
+            <label for="Prenom_Invite">* Prénom :</label>
+            <input type="text" name="Prenom_Invite" required id="Prenom_Invite" maxlength="15">
             <span class="validity">15 caractères maximum</span>
           </div>
           <div class="form-block">
-            <label for="Nom">* Nom :</label>
-            <input type="text" name="Nom" required id="Nom" maxlength="15">
+            <label for="Nom_Invite">* Nom :</label>
+            <input type="text" name="Nom_Invite" required id="Nom_Invite" maxlength="15">
             <span class="validity">15 caractères maximum</span>
           </div>
           <div class="form-block">
-            <label for="naissance">* Date de naissance :</label>
-            <input type="date" name="naissance" required min="0" minlength="1" max="5" id="naissance">
+            <label for="DateNaissance_Invite">* Date de naissance :</label>
+            <input type="date" name="DateNaissance_Invite" required min="0" minlength="1" max="5" id="DateNaissance_Invite">
           </div>
           <div class="form-block">
-            <label for="adresseemail">* Adresse email :</label>
-            <input type="email" name="adresseemail" required min="0" minlength="1" max="5" id="adresseemail">
-            <span class="validity">1 chiffres, pas de lettres</span>
+            <label for="Email_Invite">* Adresse email :</label>
+            <input type="email" name="Email_Invite" required min="0" minlength="1" max="5" id="Email_Invite">
+            <span class="validity"></span>
           </div>
           <div class="form-block">
-            <label for="telephone">* Téléphone :</label>
-            <input type="tel" name="telephone" required min="0" minlength="10" max="10" id="telephone">
+            <label for="NumeroTel_Invite">* Téléphone :</label>
+            <input type="tel" name="NumeroTel_Invite" required min="0" pattern="[0-9 ]+" minlength="10" max="10" id="NumeroTel_Invite">
             <span class="validity">Format: 06 12 34 56 78 </span>
           </div>
           <div class="form-block">
-            <label for="Chambreselection">* Chambre :</label>
-            <select name="Chambreselection" id="Chambreselection" required>
+            <label for="ID_Chambre">* Chambre :</label>
+            <select name="ID_Chambre" id="ID_Chambre" required>
               <option value="aucunechambre">--Choissisez une chambre--</option>
               <option value="ChambredeLuxe">Chambre de Luxe</option>
               <option value="ChambredeLuxeVueMer">Chambre de Luxe Vue sur la Mer</option>
@@ -134,13 +136,14 @@
             </select>
           </div>
           <div class="form-blockdate">
-            <label for="dateDebut">* Date de début :</label>
-            <input type="date" name="dateDebut" required min="0" minlength="1" max="5" id="dateDebut">
-            <label for="dateFin">* Date de fin :</label>
-            <input type="date" name="dateFin" required min="0" minlength="1" max="5" id="dateFin">
+            <label for="Date_Debut">* Date de début :</label>
+            <input type="date" name="Date_Debut" required min="0" minlength="1" max="5" id="Date_Debut">
+            <label for="Date_Fin">* Date de fin :</label>
+            <input type="date" name="Date_Fin" required min="0" minlength="1" max="5" id="Date_Fin">
           </div>
           <div class="form-block">
-            <p id="prixTotal">Le tarif total sera de : X €</p>
+            <p id="Prix_Total">Le tarif total sera de : X €</p>
+            <input type="hidden" name="Prix_Total" id="hidden_Prix_Total">
           </div>
           <div class="form-block">
             <input type="submit" value="Réserver">
@@ -149,10 +152,9 @@
       </div>
     </div>
   </div>
-  <script src="/SITE OFFICIEL/SITE AU PROPRE/Script.js">
-  </script>
   <script src="/SITE OFFICIEL/SITE AU PROPRE/Formulaire.js">
   </script>
 </body>
-
 </html>
+
+<!-- EMAIL TEMPO DETECTION -->

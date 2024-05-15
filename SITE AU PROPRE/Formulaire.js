@@ -1,7 +1,7 @@
  
  document.addEventListener('DOMContentLoaded', function () {
     // Script pour montrer la chambre selectionnée ====================================================================================
- var chambreSelect = document.getElementById('Chambreselection');
+ var chambreSelect = document.getElementById('ID_Chambre');
 
  chambreSelect.addEventListener('change', (event) => {
    var selectedValue = event.target.value;
@@ -32,33 +32,52 @@
  // SCRIPT QUI PERMET D'INDIQUER LE TARIF TOTAL
  // Une partie de ce code qui permet d'indiquer le tarif total à été effectuer à l'aide d'une IA Le reste du code à été effectuer par moi même
  var prixParNuit = {
-   ChambredeLuxe: 189,
-   ChambredeLuxeVueMer: 209,
-   LasuiteGOLDENRESORT: 399
- };
+  ChambredeLuxe: 189,
+  ChambredeLuxeVueMer: 209,
+  LasuiteGOLDENRESORT: 399
+};
 
- function differenceDeJours(dateDebut, dateFin) {
-   var unJour = 24 * 60 * 60 * 1000;
-   var debut = new Date(dateDebut);
-   var fin = new Date(dateFin);
-   return Math.round(Math.abs((debut - fin) / unJour));
- }
+function differenceDeJours(dateDebut, dateFin) {
+  var unJour = 24 * 60 * 60 * 1000;
+  var debut = new Date(dateDebut);
+  var fin = new Date(dateFin);
+  return Math.round(Math.abs((debut - fin) / unJour));
+}
 
- function mettreAJourPrixTotal() {
-   var chambreSelect = document.getElementById('Chambreselection').value;
-   var dateDebut = document.getElementById('dateDebut').value;
-   var dateFin = document.getElementById('dateFin').value;
+function mettreAJourPrixTotal() {
+  var chambreSelect = document.getElementById('ID_Chambre').value;
+  var dateDebut = document.getElementById('Date_Debut').value;
+  var dateFin = document.getElementById('Date_Fin').value;
 
-   var prixParNuitChambre = prixParNuit[chambreSelect];
-   var nombreDeNuits = differenceDeJours(dateDebut, dateFin);
+  var prixParNuitChambre = prixParNuit[chambreSelect];
+  var nombreDeNuits = differenceDeJours(dateDebut, dateFin);
 
-   var prixTotal = prixParNuitChambre * nombreDeNuits;
+  var prixTotal = prixParNuitChambre * nombreDeNuits;
 
-   document.getElementById('prixTotal').textContent = "Le tarif total sera de : " + prixTotal + " €";
- }
+  document.getElementById('Prix_Total').textContent = "Le tarif total sera de : " + prixTotal + " €";
+  document.getElementById('hidden_Prix_Total').value = prixTotal;
+}
 
- document.getElementById('Chambreselection').addEventListener('change', mettreAJourPrixTotal);
- document.getElementById('dateDebut').addEventListener('change', mettreAJourPrixTotal);
- document.getElementById('dateFin').addEventListener('change', mettreAJourPrixTotal);
+document.getElementById('ID_Chambre').addEventListener('change', mettreAJourPrixTotal);
+document.getElementById('Date_Debut').addEventListener('change', mettreAJourPrixTotal);
+document.getElementById('Date_Fin').addEventListener('change', mettreAJourPrixTotal);
 
+
+// SCRIPT QUI INDIQUE LA VALIDATION DE LA RÉSERVATION =====================================================================
+var form = document.querySelector('.cote-form form');
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+  if (form.checkValidity()) {
+    var chambre = document.getElementById('ID_Chambre').value;
+    var prix = document.getElementById('hidden_Prix_Total').value;
+    var dateDebut = document.getElementById('Date_Debut').value;
+    var dateFin = document.getElementById('Date_Fin').value;
+
+    alert("Votre réservation de la [ "+ chambre +" ] au prix total de [ "+ prix + "€ ] du [ "+ dateDebut + " ] au [ " + dateFin+ " ] est Confirmé, un email de confirmation vous sera envoyé !");
+    form.submit();
+  }
 });
+});
+
+

@@ -1,11 +1,7 @@
-
 <?php
-$db=new PDO('mysql:host=localhost;dbname=nicolas.molduch_db;port=3306;charset=utf8','root', '');
-?>
+include ("connexion.php");
 
-
-<?php
-$stmtAvis = $db->query('SELECT * FROM SAE_avis');
+$stmtAvis = $db->query('SELECT * FROM sae_avis');
 $saeavis = $stmtAvis->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,18 +13,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmtInsert = $db->prepare('INSERT INTO sae_avis (Prenom_Avis, Nom_Avis, Etoile, Commentaire) VALUES (?, ?, ?, ?)');
         $stmtInsert->execute([$Prenom, $Nom, $Etoile, $Commentaire]);
-        header("Location: index.php");
+        header("Location: index.php#commentjoin");
         exit;
     }
 }
 ?>
 
 <!-- ======================================================== -->
-<?php
-
-$requete = 'SELECT * FROM sae_chambres';
-
-if (isset($_GET['tri'])){
-    $requete .= ' ORDER BY ' . $_GET['tri'];
-}
-?>

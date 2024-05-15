@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page d'accueil</title>
+    <title>Page d'accueil - Golden Resort Hotel</title>
     <link rel="icon" type="image/x-icon" href="Img/logo-golden-resort.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles-general.css">
@@ -23,16 +23,21 @@
         </ul>
       </div>
       <div class="nav-button">
-        <a href="#">Se Connecter</a>
+        <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
+        </div>
       </nav>
-    </div>
+
     <header>
         <div class="content">
             <h1><lang="en">GOLDEN RESORT HOTEL.</lang>
             </h1>
-            <form method="GET" class="SeachBar" action="resultat.php">
-                <input type="text" class="Search" id="Search-inp" placeholder="Rechercher...">
-                <button class="Search-btn"  id="Search-inp-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <form method="GET" class="SeachBar" action="Reservation.php#reser">
+            <label for="Search-inp" class="sr-only">Rechercher :</label>
+                <input type="text" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
+                <button type="submit"class="Search-btn"  id="Search-inp-btn">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <span class="sr-only">Lancer la recherche</span>
+                </button>
             </form>
         </div>
     </header>
@@ -139,11 +144,11 @@
     </section>
     <!-- ================================================================================= -->
            <div class="Comment-Fond">
-        <section class="Section-Commentaire">
+        <section class="Section-Commentaire" id="commentjoin">
             <h6>COMMENTAIRE</h6>
             <div class="label-container">
-              <button class="hotel-arrow-gauche"><i class="fa-solid fa-angle-left"></i></button>
-              <button class="hotel-arrow-droite"><i class="fa-solid fa-chevron-right"></i></button>
+              <button class="hotel-arrow-gauche" aria-label="Défiler vers la gauche"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
+              <button class="hotel-arrow-droite" aria-label="Défiler vers la droite"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
             </div>
             <div class="card-slider">
                 <!-- PHP POUR LA GENERATION DES COMMENTAIRES -->
@@ -178,8 +183,8 @@
                 <div class="ArrierePlan">
                     <div class="Commentaire-Form">
                         <p class="comment-titre"><i class="fa-solid fa-comment"></i> <strong>Mettre un commentaire</strong></p>
-                        <form action="/SITE OFFICIEL/SITE AU PROPRE/bdd.php" method="post">
-                            <button class="CommentClose modale-comment">X</button>
+                        <form action="/SITE OFFICIEL/SITE AU PROPRE/bdd.php" method="POST">
+                            <button class="CommentClose modale-comment" aria-label="Fermer le formulaire de commentaire">X</button>
                             <p>"Tous les champs sont obligatoires"</p>
                             <div class="form-block">
                                 <label for="Prenom_Avis">* Prénom :</label>
@@ -237,14 +242,15 @@
                 <p>Samedi</p>
                 <p>9h00 à 22h00</p>
                 <br>
-                <p>Suivez-nous: <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a></p>
+                <p>Suivez-nous: <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/" aria-label="Twitter"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
+                </p>
             </div>
             <div class="Footer-border">
                 <p class="Titre"><strong>Mentions légales</strong></p>
                 <br>
-                <p class="mentionsLegale"><a href="#">Mentions légales</a></p>
+                <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
                 <br>
                 </p>
                 <p>@2024 tous droit réservé</p>

@@ -12,6 +12,17 @@ html {
 *::after {
     box-sizing: border-box;
 }
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
 
 /* BARRE DE NAVIGATION ==========================================================================================*/
 nav {
@@ -65,26 +76,25 @@ nav {
 .nav-button a {
     border-radius: 20px 20px 20px 20px;
     background-color: #91713c;
-    color: rgb(255, 255, 255);
     text-decoration: none;
     transition: color O.5s ease;
-}
-
-.nav-button a:hover {
     transition: all 0.5s ease;
-    background-color: #72582e;
-    color: white;
-    text-decoration: none;
-}
-
-.nav-button a {
     display: block;
     padding: 10px 20px;
     color: white;
     text-decoration: none;
     position: relative;
     z-index: 1;
+
 }
+
+.nav-button a:hover {
+    background-color: #72582e;
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
 
 .navbar-scrolled {
     background-color: #623e2a;

@@ -1,7 +1,15 @@
-
 * {
-  margin: 0;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -168,26 +176,25 @@ nav {
 .nav-button a {
   border-radius: 20px 20px 20px 20px;
   background-color: #91713c;
-  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: color O.5s ease;
-}
-
-.nav-button a:hover {
   transition: all 0.5s ease;
-  background-color: #72582e;
-  color: white;
-  text-decoration: none;
-}
-
-.nav-button a {
   display: block;
   padding: 10px 20px;
   color: white;
   text-decoration: none;
   position: relative;
   z-index: 1;
+
 }
+
+.nav-button a:hover {
+  background-color: #72582e;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
 /* Coté information Chambre de Luxe ============================================== */
 .Chambre-Luxe,.ChambreLuxeVueMer,.ChambreGoldenResort,.AucuneChambre {
   background-color: #623E2A;
@@ -204,6 +211,7 @@ nav {
   border-top: solid 5px white;
   padding-top: 50px;
 }
+
 .Chambre-border {
   padding-top: 40px;
   padding-left: 40px;
