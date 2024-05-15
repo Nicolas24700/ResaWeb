@@ -119,7 +119,7 @@ width: 48%;
     background-color: #ffffff;
     color: #000000;
     cursor: pointer;
-    transition: color 0.5s ease;
+    transition: all 0.5s;
 }
 
 .cote-form input[type=submit]:hover {
@@ -134,7 +134,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   position: static;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   z-index: 1;
   background-color: #623e2a;
 }

@@ -11,7 +11,9 @@
 <body>
     <nav id="navbar">
         <div class="nav-logo">
-            <img src="Img/logo-golden-resort.webp" alt="">
+        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+        <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
+        </a>
         </div>
         <div class="nav-items">
             <ul>
@@ -20,9 +22,6 @@
                 <li><a href="/SITE OFFICIEL/SITE AU PROPRE/#Offres"> Offres </a></li>
                 <li><a href="/SITE OFFICIEL/SITE AU PROPRE/#apropos"> À propos </a></li>
             </ul>
-        </div>
-        <div class="nav-button">
-            <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
         </div>
     </nav>
 

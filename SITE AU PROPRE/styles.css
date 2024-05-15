@@ -74,6 +74,7 @@ header {
 }
 
 .content h1 {
+  text-transform: uppercase;
   font-size: 3.5rem;
   margin: 20px auto;
   overflow: hidden;
@@ -153,6 +154,7 @@ h3 {
   padding-top: 60px;
   color: #91713c;
   text-align: center;
+  text-transform: uppercase
 }
 
 .Room-div {
@@ -307,6 +309,7 @@ h3 {
 }
 
 h5 {
+  text-transform: uppercase;
   font-size: 3.125rem;
   padding-top: 60px;
   color: #91713c;
@@ -458,6 +461,7 @@ h5 {
 }
 
 h6 {
+  text-transform: uppercase;
   font-size: 3.125rem;
   padding-bottom: 90px;
   padding-top: 16px;
@@ -483,13 +487,14 @@ h6 {
   padding: 15px;
   border-radius: 20px;
   font-size: 1rem;
-  transition: all 0.5s ease;
+  transition: all 0.5s;
 }
 
 .Add-comment button:hover {
   background-color: #91713c;
   color: white;
   text-decoration: none;
+  transform: scale(1.1);
 }
 
 .Add-comment {
@@ -535,8 +540,8 @@ h6 {
 }
 
 .Commentaire-Form input,
-.Commentaire-Form textarea,
-.Commentaire-Form select {
+.Commentaire-Form textarea
+{
   margin-top: 8px;
   width: 100%;
   height: 35px;
@@ -544,7 +549,6 @@ h6 {
   color: rgb(0, 0, 0);
   border-radius: 4px;
   padding: 8px 12px;
-  font-family: Inter, sans-serif;
 }
 
 .Commentaire-Form textarea {
@@ -628,6 +632,7 @@ transform: scale(1.5);
 }
 
 .Titrep {
+  text-transform: uppercase;
   font-size: 2rem;
   padding-top: 100px;
   padding-left: 5%;

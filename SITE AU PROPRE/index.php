@@ -12,7 +12,9 @@
   <body>
     <nav id="navbar">
       <div class="nav-logo">
-        <img src="Img/logo-golden-resort.webp" alt="">
+        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#">
+        <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
+        </a>
       </div>
       <div class="nav-items">
         <ul>
@@ -22,18 +24,16 @@
           <li><a href="#apropos"> À propos </a></li>
         </ul>
       </div>
-      <div class="nav-button">
-        <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
-        </div>
+      
       </nav>
 
     <header>
         <div class="content">
-            <h1><lang="en">GOLDEN RESORT HOTEL.</lang>
+            <h1><lang="en">Golden resort hotel.</lang>
             </h1>
             <form method="GET" class="SeachBar" action="Reservation.php#reser">
             <label for="Search-inp" class="sr-only">Rechercher :</label>
-                <input type="text" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
+                <input type="search" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
                 <button type="submit"class="Search-btn"  id="Search-inp-btn">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     <span class="sr-only">Lancer la recherche</span>
@@ -54,7 +54,7 @@
     </section>
     <!-- ================================================================================= -->
     <section class="Section-deux">
-        <h3>NOS CHAMBRES</h3>
+        <h3>Nos chambres</h3>
         <div class="Room-div">
             <?php
     // AFFICHAGE DES CHAMBRES DISPONIBLE , SI UNE CHAMBRE N'EST PLUS DISPONIBLE , ELLE NE SERA PAS AFFICHER
@@ -108,7 +108,7 @@
     </section>
     <!-- ================================================================================= -->
     <section class="Section-Promos" id="Offres">
-        <h5>PROMOTIONS ET OFFRES</h5>
+        <h5>Promotions et offres</h5>
         <div class="Promos-div">
             <div class="Promos">
                     <img src="Img/image-remise.webp" alt="">
@@ -123,7 +123,7 @@
             <div class="Promos">
                     <img src="Img/golden-resort-club.webp" alt="">
                 <div class="Promos-border">
-                    <p><strong>Club GOLDEN RESORT</strong></p>
+                    <p><strong>Club Golden Resort</strong></p>
                     <ul>
                         <li>Réductions jusqu'à 20% sur les services du spa et les activités.</li>
                         <li>Offres exclusives réservées aux membres.</li>
@@ -145,7 +145,7 @@
     <!-- ================================================================================= -->
            <div class="Comment-Fond">
         <section class="Section-Commentaire" id="commentjoin">
-            <h6>COMMENTAIRE</h6>
+            <h6>Commentaire</h6>
             <div class="label-container">
               <button class="hotel-arrow-gauche" aria-label="Défiler vers la gauche"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
               <button class="hotel-arrow-droite" aria-label="Défiler vers la droite"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
@@ -220,7 +220,7 @@
       <!-- ================================================================================= -->
       <footer id="apropos">
         <div class="Titrep">
-            <p><lang="en">THE GOLDEN RESORT</lang></p>
+            <p><lang="en">The golden resort</lang></p>
         </div>
         <div class="Footer-box">
             <div class="Footer-border">

@@ -33,9 +33,10 @@ nav {
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    font-size: 1.2rem;
+    font-size: 1.4em;
     z-index: 1;
 }
+
 
 .nav-items>ul>li {
     position: relative;
@@ -72,29 +73,6 @@ nav {
     width: 150px;
     height: 50px;
 }
-
-.nav-button a {
-    border-radius: 20px 20px 20px 20px;
-    background-color: #91713c;
-    text-decoration: none;
-    transition: color O.5s ease;
-    transition: all 0.5s ease;
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-
-}
-
-.nav-button a:hover {
-    background-color: #72582e;
-    color: white;
-    text-decoration: none;
-    transform: scale(1.1);
-}
-
 
 .navbar-scrolled {
     background-color: #623e2a;

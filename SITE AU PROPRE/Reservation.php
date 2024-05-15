@@ -12,7 +12,9 @@
 <body>
     <nav id="navbar">
         <div class="nav-logo">
-          <img src="Img/logo-golden-resort.webp" alt="">
+        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+        <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
+        </a>
         </div>
         <div class="nav-items">
           <ul>
@@ -22,18 +24,14 @@
             <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos"> À propos </a></li>
           </ul>
         </div>
-        <div class="nav-button">
-          <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
-          </div>
         </nav>
 
       <header>
           <div class="content">
-              <h1><lang="en">GOLDEN RESORT HOTEL.</lang></h1>
-              <p>Réservation</p>
+              <h1><lang="en">Golden resort hotel. <br>Réservation</lang></h1>
               <form method="GET" class="SeachBar" action="Reservation.php#reser">
             <label for="Search-inp" class="sr-only">Rechercher :</label>
-                <input type="text" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
+                <input type="search" class="Search" name="query" id="Search-inp" placeholder="Rechercher...">
                 <button type="submit"class="Search-btn"  id="Search-inp-btn">
                     <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     <span class="sr-only">Lancer la recherche</span>
@@ -93,7 +91,7 @@ if (empty($saechambre)) {
 
 <footer>
         <div class="Titrep">
-            <p><lang="en">THE GOLDEN RESORT</lang></p>
+            <p><lang="en">The golden resort</lang></p>
         </div>
         <div class="Footer-box">
             <div class="Footer-border">

@@ -12,7 +12,9 @@
 <body>
   <nav id="navbar">
     <div class="nav-logo">
-      <img src="Img/logo-golden-resort.webp" alt="">
+    <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+        <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
+        </a>
     </div>
     <div class="nav-items">
       <ul>
@@ -22,9 +24,6 @@
         <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos"> À propos </a></li>
       </ul>
     </div>
-    <div class="nav-button">
-      <a href="/SITE OFFICIEL/SITE AU PROPRE/Compte.php">Se Connecter</a>
-      </div>
   </nav>
 
 
@@ -103,7 +102,7 @@
           <p>* Tous les champs sont obligatoires *</p>
           <div class="form-block">
             <label for="Prenom_Invite">* Prénom :</label>
-            <input type="text" name="Prenom_Invite" required id="Prenom_Invite" maxlength="15">
+            <input type="text" name="Prenom_Invite" required id="Prenom_Invite" maxlength="15" aria-describedby="15 caractères maximum">
             <span class="validity">15 caractères maximum</span>
           </div>
           <div class="form-block">
@@ -118,12 +117,12 @@
           <div class="form-block">
             <label for="Email_Invite">* Adresse email :</label>
             <input type="email" name="Email_Invite" required min="0" minlength="1" max="5" id="Email_Invite">
-            <span class="validity"></span>
+            <span class="validity">Format attendu : nom@domaine.fr</span>
           </div>
           <div class="form-block">
             <label for="NumeroTel_Invite">* Téléphone :</label>
-            <input type="tel" name="NumeroTel_Invite" required min="0" pattern="[0-9 ]+" minlength="10" max="10" id="NumeroTel_Invite">
-            <span class="validity">Format: 06 12 34 56 78 </span>
+            <input type="tel" name="NumeroTel_Invite" required min="0" pattern="[0-9 ]+" minlength="10" max="10" id="NumeroTel_Invite" >
+            <span class="validity">Format attendu : 06 12 34 56 78 </span>
           </div>
           <div class="form-block">
             <label for="ID_Chambre">* Chambre :</label>

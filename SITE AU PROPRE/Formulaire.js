@@ -1,6 +1,6 @@
- 
  document.addEventListener('DOMContentLoaded', function () {
-    // Script pour montrer la chambre selectionnée ====================================================================================
+
+  // Script pour montrer la chambre selectionnée ====================================================================================
  var chambreSelect = document.getElementById('ID_Chambre');
 
  chambreSelect.addEventListener('change', (event) => {
@@ -63,21 +63,29 @@ document.getElementById('Date_Debut').addEventListener('change', mettreAJourPrix
 document.getElementById('Date_Fin').addEventListener('change', mettreAJourPrixTotal);
 
 
-// SCRIPT QUI INDIQUE LA VALIDATION DE LA RÉSERVATION =====================================================================
+// SCRIPT QUI INDIQUE LA VALIDATION DE LA RÉSERVATION + LA DÉTECTION D'UNE ADRESSE EMAIL TEMPORAIRE 
+//Pour la detection d'une adresse email temporaire , l'aide d'une ia à été solicité ====================================================
+
 var form = document.querySelector('.cote-form form');
 form.addEventListener('submit', function (event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  if (form.checkValidity()) {
-    var chambre = document.getElementById('ID_Chambre').value;
-    var prix = document.getElementById('hidden_Prix_Total').value;
-    var dateDebut = document.getElementById('Date_Debut').value;
-    var dateFin = document.getElementById('Date_Fin').value;
+    var email = document.getElementById('Email_Invite').value;
+    var domaineEmail = email.split('@')[1];
+    var domainesTemporaires = ["jetable.org", "temp-mail.fr", "yopmail.com","jetable.net", "mailinator.com", "monmail.fr"];
 
-    alert("Votre réservation de la [ "+ chambre +" ] au prix total de [ "+ prix + "€ ] du [ "+ dateDebut + " ] au [ " + dateFin+ " ] est Confirmé, un email de confirmation vous sera envoyé !");
-    form.submit();
-  }
+    if (domainesTemporaires.includes(domaineEmail)) {
+        alert("Les adresses e-mail temporaires ne sont pas autorisées. Veuillez utiliser une adresse e-mail permanente.");
+    } else {
+        if (form.checkValidity()) {
+            var chambre = document.getElementById('ID_Chambre').value;
+            var prix = document.getElementById('hidden_Prix_Total').value;
+            var dateDebut = document.getElementById('Date_Debut').value;
+            var dateFin = document.getElementById('Date_Fin').value;
+
+            alert("Votre réservation de la [ " + chambre + " ] au prix total de [ " + prix + "€ ] du [ " + dateDebut + " ] au [ " + dateFin + " ] est Confirmé, un email de confirmation vous sera envoyé à l'adresse suivante [ "+ email +" ] !");
+            form.submit();
+        }
+    }
 });
 });
-
-

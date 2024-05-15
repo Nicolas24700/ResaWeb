@@ -1,5 +1,5 @@
 <?php
-include ("connexion.php");
+include("connexion.php");
 
 $stmtReser = $db->query('SELECT * FROM sae_reservation');
 $saereser = $stmtReser->fetchAll(PDO::FETCH_ASSOC);
@@ -22,6 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("Location: index.php");
         exit;
+        }
     }
-}
 ?>

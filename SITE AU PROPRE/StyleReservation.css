@@ -76,13 +76,37 @@ header {
 }
 
 .content h1 {
-  font-size: 1rem;
-}
-
-.content p {
+  text-transform: uppercase;
   font-size: 3.5rem;
+  margin: 20px auto;
+overflow: hidden;
+border-right: .15em solid orange;
+white-space: nowrap;
+margin: 0 auto;
+letter-spacing: .15em;
+animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
 }
 
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
 /* SECTION DEUX CHAMBRE D'HOTEL================================================================================================ */
 .Section-reservation {
   background-color: #f4f1ed;
@@ -212,6 +236,7 @@ transform: scale(1.5);
 }
 
 .Titrep {
+  text-transform: uppercase;
   font-size: 2rem;
   padding-top: 100px;
   padding-left: 5%;
