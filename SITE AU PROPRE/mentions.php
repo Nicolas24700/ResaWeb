@@ -7,9 +7,11 @@
     <title>Page des mentions légales - Golden Resort Hotel</title>
     <link rel="icon" type="image/x-icon" href="Img/logo-golden-resort.webp">
     <link rel="stylesheet" href="mentions.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
+    <a href="#Contenu" class="skip-link">Aller au contenu</a>
         <div class="nav-logo">
         <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
@@ -25,8 +27,8 @@
         </div>
     </nav>
 
-    <section>
-        <div>
+    <section id="Contenu">
+        <div data-aos="fade-up" data-aos-duration="1500">
             <h1>Mentions légales</h1>
             <p>Ce site a été conçu uniquement à but scolaire, dans le cadre de la SAÉ 2.03. Ce site a été édité par Nicolas Molduch
                 (nicolas.molduch@edu.univ-eiffel.fr). Il s'agit d'un site de réservation de chambre d'hôtel fictif . Aucune chambre ou services n'est vendue .Il est fortement recommandé de ne mettre sur le site aucune information réelle. </p>
@@ -42,5 +44,10 @@
             <p><strong>© Molduch Nicolas 2024, Tous droits réservés.</strong></p>
         </div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+    <script>
+                  AOS.init();
+    </script>
 </body>
 </html>

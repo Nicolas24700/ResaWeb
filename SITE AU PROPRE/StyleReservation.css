@@ -12,6 +12,9 @@ html {
 *::after {
   box-sizing: border-box;
 }
+.dore {
+  color: gold !important;
+}
 
 /* BARRE DE RECHERCHE ================================================================================================*/
 
@@ -48,6 +51,7 @@ html {
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s ease-in-out, font-size 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .Search-btn:hover {
@@ -85,6 +89,7 @@ white-space: nowrap;
 margin: 0 auto;
 letter-spacing: .15em;
 animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+font-family: 'EB Garamond', serif;
 }
 
 @keyframes typing {
@@ -119,6 +124,7 @@ animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
 }
 .filterp {
   padding-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -126,6 +132,7 @@ h2 {
   padding-top: 60px;
   color: #91713c;
   padding: 20px;
+  font-family: 'EB Garamond', serif;
 }
 
 .Chambre-div {
@@ -155,9 +162,10 @@ h2 {
 }
 
 .Chambre-border p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #623e2a;
   padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Chambre-border a {
@@ -172,6 +180,7 @@ h2 {
   display: flex;
   justify-content: center;
   transition: all 0.5s;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Chambre-border a:hover {
@@ -205,6 +214,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   padding-top: 100px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Footer-border {
@@ -241,6 +251,7 @@ transform: scale(1.5);
   padding-top: 100px;
   padding-left: 5%;
   color: white;
+  font-family: 'EB Garamond', serif;
 }
 
 .mentionsLegale a {
@@ -255,7 +266,7 @@ transform: scale(1.5);
   display: flex;
   justify-content: center;
   margin-top: 100px;
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .HDP a {

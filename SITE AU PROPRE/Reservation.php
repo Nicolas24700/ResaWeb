@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="styles-general.css">
     <link rel="stylesheet" href="StyleReservation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <nav id="navbar">
+    <a href="#reser" class="skip-link">Aller au contenu</a>
         <div class="nav-logo">
         <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
@@ -19,9 +26,9 @@
         <div class="nav-items">
           <ul>
             <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php"> Accueil </a></li>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php"> Réserver </a></li>
+            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php" class="dore"> Réserver </a></li>
             <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#Offres"> Offres </a></li>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos"> À propos </a></li>
+            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos" class='blue'> À propos </a></li>
           </ul>
         </div>
         </nav>
@@ -72,7 +79,7 @@ if (empty($saechambre)) {
       $descri = $Chambre['Description'];
       $chemin = $Chambre['path_img'];
 
-      echo "<div class='Chambre'>";
+      echo "<div class='Chambre' data-aos='zoom-in' data-aos-duration='1500' >";
       echo "<img src='{$chemin}' alt=''>";
       echo "<div class='Chambre-border'>";
       echo "<p>{$descri}</p>";
@@ -94,7 +101,7 @@ if (empty($saechambre)) {
             <p><lang="en">The golden resort</lang></p>
         </div>
         <div class="Footer-box">
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Bureau des réservations</strong></p>
                 <br>
                 <p><i class="fa-solid fa-location-dot"></i>  Golden Resort Hotel,
@@ -104,7 +111,7 @@ if (empty($saechambre)) {
                 <br>
                 <p><i class="fa-regular fa-envelope"></i>  contact@goldenresorthotel.fr</p>
             </div>
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Heures d'ouverture</strong></p>
                 <br>
                 <p>Lundi au Vendredi</p>
@@ -118,7 +125,7 @@ if (empty($saechambre)) {
                     <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
                 </p>
             </div>
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Mentions légales</strong></p>
                 <br>
                 <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
@@ -129,6 +136,7 @@ if (empty($saechambre)) {
         </div>
         <p class="HDP"> <a href="#"><strong>Haut de page</strong></a></p>
       </footer>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       window.addEventListener('scroll', function () {
   var navbar = document.getElementById('navbar');
@@ -139,6 +147,7 @@ if (empty($saechambre)) {
   }
 }
 );
+AOS.init();
     </script>
 </body>
 </html>

@@ -11,6 +11,7 @@
 
 <body>
   <nav id="navbar">
+  <a href="#Contenu" class="skip-link">Aller au Formulaire</a>
     <div class="nav-logo">
     <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
@@ -27,7 +28,7 @@
   </nav>
 
 
-  <div class="FormulaireReservation">
+  <div class="FormulaireReservation" id="Contenu">
     <div class="formulaire">
       <div class="cote-info">
 

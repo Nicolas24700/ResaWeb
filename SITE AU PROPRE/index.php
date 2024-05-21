@@ -7,10 +7,19 @@
     <link rel="icon" type="image/x-icon" href="Img/logo-golden-resort.webp">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles-general.css">
+        <!-- Link pour les icones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link pour les animations au scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <nav id="navbar">
+    <a href="#Contenu" class="skip-link">Aller au contenu</a>
       <div class="nav-logo">
         <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
@@ -18,7 +27,7 @@
       </div>
       <div class="nav-items">
         <ul>
-          <li><a href="#"> Accueil </a></li>
+          <li><a href="#" class="dore"> Accueil </a></li>
           <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php"> Réserver </a></li>
           <li><a href="#Offres"> Offres </a></li>
           <li><a href="#apropos"> À propos </a></li>
@@ -42,16 +51,29 @@
         </div>
     </header>
      <!-- ================================================================================= --> 
-    <section class="Section-un">
-        <div>
-            <h2>Bienvenue dans votre luxueuse maison loin de chez vous.</h2>
-            <br>
-            <br>
-            <p>Bienvenue sur notre plateforme de réservation d'hôtel haut de gamme ! Chez <lang="en">Golden Resort</lang>, luxe, confort et service personnalisé sont nos maîtres-mots. Réservez dès maintenant et vivez une expérience inoubliable.
-            </p>
+     <section class="Section-un" id="Contenu">
+    <div data-aos="fade-right" data-aos-duration="1500">
+        <h2>Bienvenue dans votre luxueuse maison loin de chez vous.</h2>
+        <br>
+        <br>
+        <p>Bienvenue sur notre plateforme de réservation d'hôtel haut de gamme ! Chez <lang="en">Golden Resort</lang>, luxe, confort et service personnalisé sont nos maîtres-mots. Réservez dès maintenant et vivez une expérience inoubliable.
+        </p>
+    </div>
+    <div class="slideH-container" data-aos="zoom-in-left" data-aos-duration="1500">
+        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/presentation.webp" class="mySlides fade" alt="">
+        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/chambre-vue-mer.webp" class="mySlides fade" alt="">
+        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/salle-de-bain.webp" class="mySlides fade" alt="">
+
+        <button class="prev" aria-label="Défiler vers l'image précédente"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
+        <button class="next" aria-label="Défiler vers l'image suivante"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></button> 
+        <br>
+        <div class="dot-div">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
-        <img src="Img/presentation.webp" alt="">
-    </section>
+    </div>
+</section>
     <!-- ================================================================================= -->
     <section class="Section-deux">
         <h3>Nos chambres</h3>
@@ -69,7 +91,7 @@
           $descri = $Chambre['Description'];
           $chemin = $Chambre['path_img'];
 
-          echo "<div class='Room'>";
+          echo "<div class='Room' data-aos='zoom-in' data-aos-duration='1500'>";
           echo "<img src='{$chemin}' alt=''>";
           echo "<div class='Room-border'>";
           echo "<p>{$descri}</p>";
@@ -84,32 +106,30 @@
     </section>
     <!-- ================================================================================= -->
     <section class="Section-trois">
-        <div>
+        <div data-aos="fade-right" data-aos-duration="1500">
             <h4>La Suite Familiale <lang="en">GOLDEN RESORT</lang></h4>
-            <br>
-            <p>Cette suite somptueuse vous offre un espace élégant et spacieux, agrémenté d'une vue panoramique depuis votre balcon privé. Le point fort ? Un luxueux jacuzzi privé, parfait pour se détendre.
-            </p>
+            <p>Cette suite somptueuse vous offre un espace élégant et spacieux, agrémenté d'une vue panoramique depuis votre balcon privé. Le point fort ? Un luxueux jacuzzi privé, parfait pour se détendre.</p>
         </div>
-        <div>
-            <img src="Img/Suite-Golden-Resort.webp" alt="">
+        <div data-aos="zoom-in-left" data-aos-duration="1500">
+            <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/Suite-Golden-Resort.webp" alt="">
             <p class="prectangle">Une chambre luxueuse : lit douillet, vue pittoresque et divertissement assuré avec la télé.</p>
         </div>
     </section>
     <!-- ================================================================================= -->
     <section class="Section-quatre">
-        <div class="gauche">
+        <div class="gauche" data-aos="fade-left"  data-aos-duration="1500">
             <img src="Img/salle-a-manger.webp" alt="">
             <p>Une salle à manger élégante. Raffinement et convivialité garantis.</p>
         </div>
-        <div class="droite">
-            <img src="Img/salle-de-bain.webp" alt="">
+        <div class="droite" >
+            <img src="Img/salle-de-bain.webp" alt="" data-aos="fade-right"  data-aos-duration="1500">
             <p>Une luxueuse salle de bain : design élégant, équipements haut de gamme, relaxation garantie. Pour vous garantir un séjour parfait !</p>
         </div>
     </section>
     <!-- ================================================================================= -->
     <section class="Section-Promos" id="Offres">
         <h5>Promotions et offres</h5>
-        <div class="Promos-div">
+        <div class="Promos-div" data-aos="fade-up" data-aos-duration="1500">
             <div class="Promos">
                     <img src="Img/image-remise.webp" alt="">
                 <div class="Promos-border">
@@ -147,8 +167,8 @@
         <section class="Section-Commentaire" id="commentjoin">
             <h6>Commentaire</h6>
             <div class="label-container">
-              <button class="hotel-arrow-gauche" aria-label="Défiler vers la gauche"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
-              <button class="hotel-arrow-droite" aria-label="Défiler vers la droite"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+              <button class="hotel-arrow-gauche" aria-label="Défiler les commentaire vers la gauche"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
+              <button class="hotel-arrow-droite" aria-label="Défiler les commentaire vers la droite"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
             </div>
             <div class="card-slider">
                 <!-- PHP POUR LA GENERATION DES COMMENTAIRES -->
@@ -165,7 +185,7 @@
                 $commentaireTexte = $commentaire['Commentaire'];
 
                 echo "<div class='Commentaire-card'>";
-                echo "<div class='Commentaire'>";
+                echo "<div class='Commentaire' data-aos='fade-left' data-aos-duration='1500'>";
                 echo "<img src='Img/guillemet.webp' alt=''>";
                 echo "<p class='note'><strong>{$etoile}/5 </strong></p>";
                 echo "<p class='pmargin'>{$commentaireTexte}</p>";
@@ -204,7 +224,7 @@
                 
                             <div class="form-block">
                                 <label for="Commentaire">* Votre Commentaire :</label><br>
-                                <textarea name="Commentaire" id="Commentaire" cols="30" rows="10" maxlength="100" required></textarea>
+                                <textarea name="Commentaire" id="Commentaire" cols="30" rows="10" maxlength="100" required>         </textarea>
                                 <span>100 caractères maximum</span>
                             </div>
                             <br>
@@ -223,7 +243,7 @@
             <p><lang="en">The golden resort</lang></p>
         </div>
         <div class="Footer-box">
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Bureau des réservations</strong></p>
                 <br>
                 <p><i class="fa-solid fa-location-dot"></i>  Golden Resort Hotel,
@@ -233,7 +253,7 @@
                 <br>
                 <p><i class="fa-regular fa-envelope"></i>  contact@goldenresorthotel.fr</p>
             </div>
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Heures d'ouverture</strong></p>
                 <br>
                 <p>Lundi au Vendredi</p>
@@ -247,7 +267,7 @@
                     <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fa-brands fa-facebook" aria-hidden="true"></i></a>
                 </p>
             </div>
-            <div class="Footer-border">
+            <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Mentions légales</strong></p>
                 <br>
                 <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
@@ -258,6 +278,7 @@
         </div>
         <p class="HDP"> <a href="#"><strong>Haut de page</strong></a></p>
       </footer>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="/SITE OFFICIEL/SITE AU PROPRE/Script.js"></script>
   </body>
 </html>
