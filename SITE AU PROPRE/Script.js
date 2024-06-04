@@ -103,15 +103,30 @@ function showSlides(n) {
 
 document.querySelector('.prev').addEventListener('click', function() {
     plusSlides(-1);
+    resetInterval();
 });
 
 document.querySelector('.next').addEventListener('click', function() {
     plusSlides(1);
+    resetInterval();
 });
 
 var dots = document.querySelectorAll('.dot');
 dots.forEach((dot, index) => {
     dot.addEventListener('click', function() {
         currentSlide(index + 1);
+        resetInterval();
     });
 });
+
+// Ajouter l'intervalle automatique
+let slideInterval = setInterval(function() {
+    plusSlides(1);
+}, 5000);
+
+function resetInterval() {
+    clearInterval(slideInterval);
+    slideInterval = setInterval(function() {
+        plusSlides(1);
+    }, 5000);
+}

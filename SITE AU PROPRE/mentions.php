@@ -13,16 +13,16 @@
     <nav id="navbar">
     <a href="#Contenu" class="skip-link">Aller au contenu</a>
         <div class="nav-logo">
-        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+        <a href="index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
         </a>
         </div>
         <div class="nav-items">
             <ul>
-                <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php"> Accueil </a></li>
-                <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php"> Réserver </a></li>
-                <li><a href="/SITE OFFICIEL/SITE AU PROPRE/#Offres"> Offres </a></li>
-                <li><a href="/SITE OFFICIEL/SITE AU PROPRE/#apropos"> À propos </a></li>
+                <li><a href="index.php"> Accueil </a></li>
+                <li><a href="Reservation.php"> Réserver </a></li>
+                <li><a href="#Offres"> Offres </a></li>
+                <li><a href="#apropos"> À propos </a></li>
             </ul>
         </div>
     </nav>

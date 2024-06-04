@@ -19,16 +19,16 @@
     <nav id="navbar">
     <a href="#reser" class="skip-link">Aller au contenu</a>
         <div class="nav-logo">
-        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+        <a href="index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
         </a>
         </div>
         <div class="nav-items">
           <ul>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php"> Accueil </a></li>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php" class="dore"> Réserver </a></li>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#Offres"> Offres </a></li>
-            <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos" class='blue'> À propos </a></li>
+            <li><a href="index.php"> Accueil </a></li>
+            <li><a href="Reservation.php" class="dore"> Réserver </a></li>
+            <li><a href="index.php#Offres"> Offres </a></li>
+            <li><a href="index.php#apropos" class='blue'> À propos </a></li>
           </ul>
         </div>
         </nav>
@@ -49,7 +49,7 @@
       </header>
     <section id="reser" class="Section-reservation">
     <h2>Reservation</h2>
-    <form method="get" action="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php#reser">
+    <form method="get" action="Reservation.php#reser">
         <p class="filterp">Trier par :
             <button class="tri" name="tri" value="asc">Prix croissant</button> / 
             <button class="tri" name="tri" value="desc">Prix décroissant</button>
@@ -85,7 +85,7 @@ if (empty($saechambre)) {
       echo "<p>{$descri}</p>";
       echo "<p>{$type}</p>";
       echo "<p>à partir de <strong>{$prix} €</strong> la nuit</p>";
-      echo "<a href='/SITE OFFICIEL/SITE AU PROPRE/Formulaire.php'>RÉSERVER</a>";
+      echo "<a href='Formulaire.php'>Réserver</a>";
       echo "</div>";
       echo "</div>";
     }
@@ -128,7 +128,7 @@ if (empty($saechambre)) {
             <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Mentions légales</strong></p>
                 <br>
-                <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
+                <p class="mentionsLegale"><a href="mentions.php#section">Mentions légales</a></p>
                 <br>
                 </p>
                 <p>@2024 tous droit réservé</p>

@@ -21,14 +21,14 @@
     <nav id="navbar">
     <a href="#Contenu" class="skip-link">Aller au contenu</a>
       <div class="nav-logo">
-        <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#">
+        <a href="index.php#">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
         </a>
       </div>
       <div class="nav-items">
         <ul>
           <li><a href="#" class="dore"> Accueil </a></li>
-          <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php"> Réserver </a></li>
+          <li><a href="Reservation.php"> Réserver </a></li>
           <li><a href="#Offres"> Offres </a></li>
           <li><a href="#apropos"> À propos </a></li>
         </ul>
@@ -60,9 +60,9 @@
         </p>
     </div>
     <div class="slideH-container" data-aos="zoom-in-left" data-aos-duration="1500">
-        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/presentation.webp" class="mySlides fade" alt="">
-        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/chambre-vue-mer.webp" class="mySlides fade" alt="">
-        <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/salle-de-bain.webp" class="mySlides fade" alt="">
+        <img src="Img/presentation.webp" class="mySlides fade" alt="">
+        <img src="Img/chambre-vue-mer.webp" class="mySlides fade" alt="">
+        <img src="Img/salle-de-bain.webp" class="mySlides fade" alt="">
 
         <button class="prev" aria-label="Défiler vers l'image précédente"><i class="fa-solid fa-angle-left" aria-hidden="true"></i></button>
         <button class="next" aria-label="Défiler vers l'image suivante"><i class="fa-solid fa-angle-right" aria-hidden="true"></i></button> 
@@ -97,7 +97,7 @@
           echo "<p>{$descri}</p>";
           echo "<p>{$type}</p>";
           echo "<p>à partir de <strong>{$prix} €</strong> la nuit</p>";
-          echo "<a href='/SITE OFFICIEL/SITE AU PROPRE/Formulaire.php'>RÉSERVER</a>";
+          echo "<a href='Formulaire.php'>Réserver</a>";
           echo "</div>";
           echo "</div>";
         }
@@ -111,7 +111,7 @@
             <p>Cette suite somptueuse vous offre un espace élégant et spacieux, agrémenté d'une vue panoramique depuis votre balcon privé. Le point fort ? Un luxueux jacuzzi privé, parfait pour se détendre.</p>
         </div>
         <div data-aos="zoom-in-left" data-aos-duration="1500">
-            <img src="/SITE OFFICIEL/SITE AU PROPRE/Img/Suite-Golden-Resort.webp" alt="">
+            <img src="Img/Suite-Golden-Resort.webp" alt="">
             <p class="prectangle">Une chambre luxueuse : lit douillet, vue pittoresque et divertissement assuré avec la télé.</p>
         </div>
     </section>
@@ -203,7 +203,7 @@
                 <div class="ArrierePlan">
                     <div class="Commentaire-Form">
                         <p class="comment-titre"><i class="fa-solid fa-comment"></i> <strong>Mettre un commentaire</strong></p>
-                        <form action="/SITE OFFICIEL/SITE AU PROPRE/bdd.php" method="POST">
+                        <form action="bdd.php" method="POST">
                             <button class="CommentClose modale-comment" aria-label="Fermer le formulaire de commentaire">X</button>
                             <p>"Tous les champs sont obligatoires"</p>
                             <div class="form-block">
@@ -270,7 +270,7 @@
             <div class="Footer-border" data-aos="flip-left" data-aos-duration="1500">
                 <p class="Titre"><strong>Mentions légales</strong></p>
                 <br>
-                <p class="mentionsLegale"><a href="/SITE OFFICIEL/SITE AU PROPRE/mentions.php#section">Mentions légales</a></p>
+                <p class="mentionsLegale"><a href="mentions.php#section">Mentions légales</a></p>
                 <br>
                 </p>
                 <p>@2024 tous droit réservé</p>
@@ -279,6 +279,6 @@
         <p class="HDP"> <a href="#"><strong>Haut de page</strong></a></p>
       </footer>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-      <script src="/SITE OFFICIEL/SITE AU PROPRE/Script.js"></script>
+      <script src="Script.js"></script>
   </body>
 </html>

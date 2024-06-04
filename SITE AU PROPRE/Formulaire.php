@@ -13,16 +13,16 @@
   <nav id="navbar">
   <a href="#Contenu" class="skip-link">Aller au Formulaire</a>
     <div class="nav-logo">
-    <a href="/SITE OFFICIEL/SITE AU PROPRE/index.php">
+    <a href="index.php">
         <img src="Img/logo-golden-resort.webp" alt="Lien vers la page d'accueil">
         </a>
     </div>
     <div class="nav-items">
       <ul>
-        <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php"> Accueil </a></li>
-        <li><a href="/SITE OFFICIEL/SITE AU PROPRE/Reservation.php"> Réserver </a></li>
-        <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#Offres"> Offres </a></li>
-        <li><a href="/SITE OFFICIEL/SITE AU PROPRE/index.php#apropos"> À propos </a></li>
+        <li><a href="index.php"> Accueil </a></li>
+        <li><a href="Reservation.php"> Réserver </a></li>
+        <li><a href="index.php#Offres"> Offres </a></li>
+        <li><a href="index.php#apropos"> À propos </a></li>
       </ul>
     </div>
   </nav>
@@ -97,7 +97,7 @@
             ?>
       </div>
       <div class="cote-form">
-        <form action="/SITE OFFICIEL/SITE AU PROPRE/Formulairebdd.php" method="post">
+        <form action="Formulairebdd.php" method="post">
           <h1>Réserver une chambre</h1>
           <div class="surligneurone"></div>
           <p>* Tous les champs sont obligatoires *</p>
@@ -130,7 +130,7 @@
             <select name="ID_Chambre" id="ID_Chambre" required>
               <option value="aucunechambre">--Choissisez une chambre--</option>
               <option value="ChambredeLuxe">Chambre de Luxe</option>
-              <option value="ChambredeLuxeVueMer">Chambre de Luxe Vue sur la Mer</option>
+              <option value="ChambredeLuxeVueMer">Chambre de Luxe avec vue sur la mer</option>
               <option value="LasuiteGOLDENRESORT">La suite familiale <lang="en">GOLDEN RESORT</lang>
               </option>
             </select>
@@ -152,9 +152,7 @@
       </div>
     </div>
   </div>
-  <script src="/SITE OFFICIEL/SITE AU PROPRE/Formulaire.js">
+  <script src="Formulaire.js">
   </script>
 </body>
 </html>
-
-<!-- EMAIL TEMPO DETECTION -->

@@ -181,6 +181,7 @@ h2 {
   justify-content: center;
   transition: all 0.5s;
   font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
 
 .Chambre-border a:hover {
