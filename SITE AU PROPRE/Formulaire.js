@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
   // Script pour montrer la chambre selectionnée ====================================================================================
  var chambreSelect = document.getElementById('ID_Chambre');

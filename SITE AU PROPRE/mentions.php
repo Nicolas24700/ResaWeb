@@ -21,8 +21,8 @@
             <ul>
                 <li><a href="index.php"> Accueil </a></li>
                 <li><a href="Reservation.php"> Réserver </a></li>
-                <li><a href="#Offres"> Offres </a></li>
-                <li><a href="#apropos"> À propos </a></li>
+                <li><a href="index.php#Offres"> Offres </a></li>
+                <li><a href="index.php#apropos"> À propos </a></li>
             </ul>
         </div>
     </nav>

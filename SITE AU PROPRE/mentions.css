@@ -1,141 +1,141 @@
 * {
-    padding: 0px;
-    margin: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 section {
-    background-color: #f4f1ed;
-    color: #91713c;
-    height: 100vh;
+  background-color: #f4f1ed;
+  color: #91713c;
+  height: 100vh;
 }
 h1, H2 , H3 {
-    text-align: left;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    color: #91713c;
-    font-size: 2rem;
-    font-family: 'EB Garamond', serif;
+  text-align: left;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  color: #91713c;
+  font-size: 2rem;
+  font-family: 'EB Garamond', serif;
 }
 p{
-    font-size: 1.2rem;
-    margin: 20px;
-    color: #72582e;
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  margin: 20px;
+  color: #72582e;
+  font-family: Arial, Helvetica, sans-serif;
 }
 ul{
-    padding-left: 40px;
-    color: #72582e;
-    font-size: 1.2rem;
+  padding-left: 40px;
+  color: #72582e;
+  font-size: 1.2rem;
 }
 section div {
-    margin: 0 auto;
-    width: 80%;
-    padding-top: 50px;
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 50px;
 }
 
 
 .skip-link {
-  background-color: #fff;
-  border: solid 3px #000;
-  color: #000;
-  padding: 0.4em 0.5em;
-  text-decoration: none;
+background-color: #fff;
+border: solid 3px #000;
+color: #000;
+padding: 0.4em 0.5em;
+text-decoration: none;
 }
 
 .skip-link:not(:focus):not(:active) {
-  border: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(100%);
-  clip-path: inset(100%);
-  height: 1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+border: 0;
+clip: rect(0 0 0 0);
+-webkit-clip-path: inset(100%);
+clip-path: inset(100%);
+height: 1px;
+overflow: hidden;
+padding: 0;
+position: absolute;
+white-space: nowrap;
+width: 1px;
 }
 
 .skip-link:focus {
-  left: 0;
-  position: absolute;
-  top: 0;
-  z-index: 999;
+left: 0;
+position: absolute;
+top: 0;
+z-index: 999;
 }
 
 /* BARRE DE NAVIGATION ============================================== */
 nav {
-  position: relative;
-  display: flex;
-  padding: 10px;
-  justify-content: space-around;
-  align-items: center;
-  position: static;
-  font-size: 1.4rem;
-  z-index: 1;
-  background-color: #623e2a;
+position: relative;
+display: flex;
+padding: 10px;
+justify-content: space-around;
+align-items: center;
+position: static;
+font-size: 1.4rem;
+z-index: 1;
+background-color: #623e2a;
 }
 
 .nav-items > ul > li {
-  position: relative;
-  display: inline;
-  list-style: none;
-  margin: 10px;
-  padding: 10px 20px;
-  cursor: pointer;
+position: relative;
+display: inline;
+list-style: none;
+margin: 10px;
+padding: 10px 20px;
+cursor: pointer;
 }
 
 .nav-items > ul > li > a {
-  color: white;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+color: white;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav-items > ul > li::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.17rem;
-  background-color: gold;
-  left: 0;
-  bottom: 0;
-  transform-origin: 0% 100%;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+content: "";
+position: absolute;
+width: 100%;
+height: 0.17rem;
+background-color: gold;
+left: 0;
+bottom: 0;
+transform-origin: 0% 100%;
+transform: scaleX(0);
+transition: transform 0.3s ease;
 }
 
 .nav-items > ul > li:hover::after {
-  transform: scaleX(1);
+transform: scaleX(1);
 }
 .nav-logo img {
-  width: 150px;
-  height: 50px;
+width: 150px;
+height: 50px;
 }
 .nav-button a {
-  border-radius: 20px 20px 20px 20px;
-  background-color: #91713c;
-  text-decoration: none;
-  transition: color O.5s ease;
-  transition: all 0.5s ease;
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-  position: relative;
-  z-index: 1;
+border-radius: 20px 20px 20px 20px;
+background-color: #91713c;
+text-decoration: none;
+transition: color O.5s ease;
+transition: all 0.5s ease;
+display: block;
+padding: 10px 20px;
+color: white;
+text-decoration: none;
+position: relative;
+z-index: 1;
 
 }
 
 .nav-button a:hover {
-  background-color: #72582e;
-  color: white;
-  text-decoration: none;
-  transform: scale(1.1);
+background-color: #72582e;
+color: white;
+text-decoration: none;
+transform: scale(1.1);
 }
