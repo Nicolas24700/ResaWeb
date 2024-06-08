@@ -11,5 +11,5 @@ Pour installer la Base de Données en Local :
 * créer une base de données
 * importer les table dans cette base de données en .sql
 
-Pour acceder au site :
+Pour accéder au site :
 * taper l'url : localhost/resaweb
