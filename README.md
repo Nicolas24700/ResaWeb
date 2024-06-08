@@ -1,6 +1,6 @@
 # ResaWeb
 
-Installer le site en local :
+Pour installer le site en local :
 
 * Ouvrir XAMPP et activer les serveurs Apache et MySQL.
 * Ouvrir le dossier htdocs.
