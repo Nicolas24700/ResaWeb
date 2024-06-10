@@ -222,7 +222,7 @@ footer {
   border: solid 2px white;
   height: 242px;
   width: 340px;
-  padding: 10px;
+  padding-left: 5px;
   color: white;
   font-size: 1.3rem;
 }

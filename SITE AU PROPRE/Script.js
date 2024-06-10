@@ -119,7 +119,7 @@ dots.forEach((dot, index) => {
     });
 });
 
-// Ajouter l'intervalle automatique
+// Ajoute l'intervalle automatique
 let slideInterval = setInterval(function() {
     plusSlides(1);
 }, 5000);
