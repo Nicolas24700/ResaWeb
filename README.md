@@ -17,7 +17,8 @@ Bienvenue dans le projet **ResaWeb**, Ce site a été conçu dans le cadre de la
 
 ## 🗄️ Installation de la base de données  
 
-1.**Ouvrir phpMyAdmin**
+1. **Ouvrir phpMyAdmin**
+
 2. **importer la base de données : nicolas_molduch_bd.sql**
 
 ## 🌍 Accéder au site  
