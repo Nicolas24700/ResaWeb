@@ -1,6 +1,6 @@
 # 🌐 ResaWeb  
 
-Bienvenue dans le projet **ResaWeb**, Ce site a été conçu dans le cadre de la SAÉ 2.03. Ce site a été édité par Nicolas Molduch (nicolas.molduch@edu.univ-eiffel.fr). Il s'agit d'un site de réservation de chambre d'hôtel fictif . Aucune chambre ou services n'est vendue .Il est fortement recommandé de ne mettre sur le site aucune information réelle.
+Bienvenue dans le projet **ResaWeb**, Ce site a été conçu dans le cadre de la SAÉ 2.03. Ce site a été édité par Nicolas Molduch (nicolas.molduch@edu.univ-eiffel.fr). Il s'agit d'un site de réservation de chambre d'hôtel fictif . Aucune chambre ou service n'est vendue . Il est fortement recommandé de ne mettre sur le site aucune information réelle.
 
 ---
 
@@ -23,4 +23,5 @@ Bienvenue dans le projet **ResaWeb**, Ce site a été conçu dans le cadre de la
 
 ## 🌍 Accéder au site  
 
-1. **Pour accéder au site , taper l'url : localhost/resaweb**
+1. **Pour accéder au site en local , taper l'url : localhost/resaweb**
+2. **Pour accéder au site hébergé, taper https://resaweb.molduch.butmmi.o2switch.site/**
